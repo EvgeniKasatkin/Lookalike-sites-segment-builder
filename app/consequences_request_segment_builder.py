@@ -21,7 +21,7 @@ class ChatGPTRequests:
         no_parse_sites_df = pd.read_csv(os.getenv('file_of_sites')) #virtual env txt file of sorted and no requested sites
         list_of_site = list(no_parses_site_df['site'])
 
-        query_to_chatGPT = 'Give me the top-10 of most similar sites like ' + str(list_of_site[0]) + 'in' + str(os.getenv('segment_of_markets')) + ' and for ' +  str('language_jurisdiction') + 'language persons with link'
+        query_to_chatGPT = 'Give me the top-10 of most similar sites like ' + str(list_of_site[0]) + 'in' + str(os.getenv('segment_of_markets')) + ' and for ' +  str(os.getenv('language_jurisdiction')) + 'language persons with link'
 
         payload = { "conversation": [
     			    {
